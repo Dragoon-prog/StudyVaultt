@@ -1,0 +1,303 @@
+
+/* NU inspired admin dashboard: black, gold, and blue */
+
+body.admin-page {
+    --admin-black: #080b10;
+    --admin-panel: #111720;
+    --admin-raised: #171f2b;
+    --admin-blue: #1769aa;
+    --admin-blue-bright: #2388d1;
+    --admin-gold: #d7ad45;
+    --admin-gold-light: #f1d27d;
+    --admin-text: #f1f4f8;
+    --admin-muted: #a8b2c1;
+    --admin-line: #293444;
+    background: var(--admin-black);
+    color: var(--admin-text)
+}
+
+body.admin-page .topbar {
+    background: #05070b;
+    border-bottom: 1px solid #263241;
+    box-shadow: 0 4px 20px rgba(0,0,0,.32)
+}
+
+body.admin-page .brand {
+    color: var(--admin-gold-light)
+}
+
+body.admin-page .topbar .main-nav>a {
+    color: #d5dce6
+}
+
+body.admin-page .topbar .main-nav>a:hover {
+    color: var(--admin-gold-light)
+}
+
+body.admin-page .profile-avatar {
+    background: #123b61;
+    color: #fff
+}
+
+body.admin-page .profile-menu summary {
+    color: var(--admin-text)
+}
+
+body.admin-page .profile-menu summary:hover,
+body.admin-page .profile-menu[open] summary {
+    background: #17212d
+}
+
+body.admin-page .profile-dropdown {
+    background: var(--admin-panel);
+    border-color: var(--admin-line);
+    color: var(--admin-text)
+}
+
+body.admin-page .profile-dropdown .profile-logout {
+    background: #1a2634;
+    color: #e6edf5
+}
+
+body.admin-page .profile-dropdown .profile-logout:hover {
+    background: #203c56;
+    color: #fff
+}
+
+body.admin-page .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1px 0 20px
+}
+
+/* Admin Container */
+.admin-container {
+    width: min(1160px,calc(100% - 48px));
+    margin: 42px auto 70px;
+    color: var(--admin-text)
+}
+
+.admin-container>h1 {
+    position: relative;
+    font-size: clamp(28px,4vw,36px);
+    font-weight: 800;
+    letter-spacing: -.6px;
+    margin: 0 0 30px;
+    padding: 0 0 17px;
+    color: var(--admin-text)
+}
+
+.admin-container>h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg,var(--admin-gold),var(--admin-blue-bright))
+}
+
+/* Cards */
+.admin-container .card {
+    background: var(--admin-panel);
+    border: 1px solid var(--admin-line);
+    border-radius: 16px;
+    padding: clamp(20px,3vw,28px);
+    margin-bottom: 24px;
+    box-shadow: 0 14px 36px rgba(0,0,0,.24)
+}
+
+.admin-container .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 20px
+}
+
+.admin-container .card-header h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 750;
+    color: var(--admin-gold-light)
+}
+
+.admin-container .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 10px;
+    background: var(--admin-blue);
+    color: #fff;
+    border: 1px solid #3185bd;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+/* Tables */
+.admin-container .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    background: #0d131b;
+    border: 1px solid var(--admin-line);
+    border-radius: 11px
+}
+
+.admin-container .table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.admin-container .table thead th {
+    background: #182230;
+    color: var(--admin-gold-light);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid #344253;
+    white-space: nowrap
+}
+
+.admin-container .table tbody td {
+    padding: 15px 16px;
+    font-size: 14px;
+    color: #d2d9e2;
+    border-bottom: 1px solid #222d3a;
+    vertical-align: middle
+}
+
+.admin-container .table tbody tr:last-child td {
+    border-bottom: 0
+}
+
+.admin-container .table tbody tr:hover {
+    background: #141e2a
+}
+
+.admin-container .table td:nth-child(3),
+.admin-container .table td:nth-child(4) {
+    font-size: 13px
+}
+
+/* Actions */
+.admin-container .actions {
+    white-space: nowrap
+}
+
+.admin-container .action-form {
+    display: inline-block;
+    margin: 0 5px 0 0
+}
+
+.admin-container .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 14px;
+    border: 1px solid #2d82bd;
+    border-radius: 7px;
+    background: var(--admin-blue);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .18s ease,transform .18s ease,box-shadow .18s ease
+}
+
+.admin-container .button:hover {
+    background: var(--admin-blue-bright);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(23,105,170,.28)
+}
+
+.admin-container .button.danger {
+    background: #a9343c;
+    border-color: #c04a50;
+    color: #fff
+}
+
+.admin-container .button.danger:hover {
+    background: #c3424a;
+    box-shadow: 0 5px 14px rgba(195,66,74,.2)
+}
+
+/* Empty State */
+.admin-container .empty {
+    text-align: center;
+    padding: 34px 16px!important;
+    color: var(--admin-muted)!important;
+    font-size: 14px
+}
+
+.admin-container .status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.admin-container .status-active {
+    background: rgba(35,136,89,.16);
+    border-color: rgba(76,190,129,.32);
+    color: #8ee0b1
+}
+
+.admin-container .status-inactive {
+    background: rgba(215,173,69,.13);
+    border-color: rgba(215,173,69,.3);
+    color: #f1d27d
+}
+
+.admin-container .status-blocked {
+    background: rgba(195,66,74,.15);
+    border-color: rgba(195,66,74,.35);
+    color: #ff9ca2
+}
+
+
+/* Footer */
+body.admin-page .footer {
+    color: #98a4b4;
+    border-top: 1px solid #202b38;
+    background: #080b10
+}
+
+/* Responsive Layout */
+@media(max-width:768px) {
+    .admin-container {
+        width: calc(100% - 28px);
+        margin: 28px auto 48px
+    }
+
+    .admin-container .card {
+        padding: 18px;
+        border-radius: 13px
+    }
+
+    .admin-container .card-header h2 {
+        font-size: 18px
+    }
+
+    .admin-container .table thead th,
+    .admin-container .table tbody td {
+        padding: 12px;
+        font-size: 13px
+    }
+
+    .admin-container .button {
+        padding: 8px 11px;
+        font-size: 12px
+    }
+}
